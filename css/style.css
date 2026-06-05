@@ -453,11 +453,11 @@ body {
   display: flex;
   align-items: flex-end;
   gap: 0;
-  padding: 16px 18px 0;
+  padding: 1px 18px -10px;
 }
 
 .proj-clip{
-  width: 22px;
+  width: 30px;
   height: auto;
   transform: rotate(-12deg);
   margin-left: 50px;
@@ -468,13 +468,20 @@ body {
 
 .proj-tab-label {
   display: inline-block;
-  background: var(--cream-light);
+  background: #e7e7e5;
   font-family: var(--font-body);
   font-weight: 900;
   font-size: 1rem;
-  color: var(--navy);
-  padding: 5px 20px 6px;
+  color: var(--cr);
+
+  padding: 6px 50px 7px;
   border-radius: var(--r-sm) var(--r-sm) 0 0;
+
+  box-shadow: 0 -3px 8px rgba(0,0,0,0.18);
+
+  transform: translateY(20px); /* ❌ quita el 2px */
+
+  border-bottom: none; /* ❌ elimina el borde gigante */
 }
 
 /* Fondos: verde oliva */
@@ -576,6 +583,33 @@ body {
 
 .dot.active {
   background: var(--gold);
+}
+
+.video-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 99999;
+}
+
+.video-modal.show {
+  display: flex;
+}
+
+.video-content {
+  position: relative;
+  width: 70%;
+  max-width: 900px;
+}
+
+.video-content video {
+  width: 100%;
+  border-radius: 10px;
 }
 
 /* ============================================================

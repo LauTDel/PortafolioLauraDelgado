@@ -29,9 +29,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const carousels = document.querySelectorAll('[data-carousel]');
 
   carousels.forEach(carouselEl => {
-    const id     = carouselEl.dataset.carousel;
-    const track  = carouselEl.querySelector('.carousel-track');
-    const cards  = carouselEl.querySelectorAll('.proj-card');
+    const id = carouselEl.dataset.carousel;
+    const track = carouselEl.querySelector('.carousel-track');
+    const cards = carouselEl.querySelectorAll('.proj-card');
     const btnPrev = carouselEl.querySelector('.btn-prev');
     const btnNext = carouselEl.querySelector('.btn-next');
     const dotsWrap = carouselEl.querySelector('.carousel-dots');
@@ -86,8 +86,8 @@ document.addEventListener('DOMContentLoaded', () => {
     form.addEventListener('submit', e => {
       e.preventDefault();
 
-      const nombre  = form.querySelector('#nombre').value.trim();
-      const correo  = form.querySelector('#correo').value.trim();
+      const nombre = form.querySelector('#nombre').value.trim();
+      const correo = form.querySelector('#correo').value.trim();
       const mensaje = form.querySelector('#mensaje').value.trim();
 
       /* Validación básica */
@@ -122,5 +122,41 @@ document.addEventListener('DOMContentLoaded', () => {
       : 'rgba(60,140,80,.18)';
     msg.style.color = type === 'error' ? '#8b2020' : '#1a5c30';
   }
+
+  const modal = document.getElementById("videoModal");
+  const modalVideo = document.getElementById("modalVideo");
+  const closeBtn = document.querySelector(".close");
+
+  // abrir modal
+  document.querySelectorAll(".proj-card img").forEach(img => {
+    img.addEventListener("click", () => {
+
+      const videoSrc = img.getAttribute("data-video");
+      if (!videoSrc) return;
+
+      modal.classList.add("show");
+      modalVideo.src = videoSrc;
+      modalVideo.currentTime = 0;
+      modalVideo.play();
+    });
+  });
+
+  // cerrar modal
+  function cerrar() {
+    modal.classList.remove("show");
+    modalVideo.pause();
+    modalVideo.currentTime = 0;
+    modalVideo.src = "";
+  }
+
+  closeBtn.addEventListener("click", cerrar);
+
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) cerrar();
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") cerrar();
+  });
 
 });

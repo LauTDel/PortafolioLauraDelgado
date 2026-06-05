@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
+
 <body>
 
   <!-- ====================================================
@@ -103,37 +104,18 @@
             ╚══════════════════════════════════════════════════╝
           -->
           <div class="proj-card">
-            <div class="img-placeholder">
-              <svg viewBox="0 0 80 60" fill="none">
-                <rect x="4" y="4" width="72" height="52" rx="4" stroke="#9aabb8" stroke-width="2" />
-                <circle cx="24" cy="22" r="8" stroke="#9aabb8" stroke-width="2" />
-                <path d="M4 52 L20 34 L36 46 L52 28 L76 52" stroke="#9aabb8" stroke-width="2" fill="none" />
-              </svg>
-              <span>modelo-1.jpg</span>
-            </div>
+            <img src="Imagenes/fondo4.png" alt="Fondo proyecto 1" data-video="videos/video1.mp4">
+          </div>
+
+
+          <div class="proj-card">
+            <img src="Imagenes/fondo5.png" alt="Fondo proyecto 1">
           </div>
 
           <div class="proj-card">
-            <div class="img-placeholder">
-              <svg viewBox="0 0 80 60" fill="none">
-                <rect x="4" y="4" width="72" height="52" rx="4" stroke="#9aabb8" stroke-width="2" />
-                <circle cx="24" cy="22" r="8" stroke="#9aabb8" stroke-width="2" />
-                <path d="M4 52 L20 34 L36 46 L52 28 L76 52" stroke="#9aabb8" stroke-width="2" fill="none" />
-              </svg>
-              <span>modelo-2.jpg</span>
-            </div>
+            <img src="Imagenes/fondo6.png" alt="Fondo proyecto 1">
           </div>
 
-          <div class="proj-card">
-            <div class="img-placeholder">
-              <svg viewBox="0 0 80 60" fill="none">
-                <rect x="4" y="4" width="72" height="52" rx="4" stroke="#9aabb8" stroke-width="2" />
-                <circle cx="24" cy="22" r="8" stroke="#9aabb8" stroke-width="2" />
-                <path d="M4 52 L20 34 L36 46 L52 28 L76 52" stroke="#9aabb8" stroke-width="2" fill="none" />
-              </svg>
-              <span>modelo-3.jpg</span>
-            </div>
-          </div>
         </div>
 
         <button class="btn-carousel btn-next" aria-label="Imagen siguiente en Modelos 3D">❯</button>
@@ -164,49 +146,52 @@
             ║       alt="Proyecto web 1" />                   ║
             ╚══════════════════════════════════════════════════╝
           -->
+
           <div class="proj-card">
-            <div class="img-placeholder">
-              <svg viewBox="0 0 80 60" fill="none">
-                <rect x="4" y="4" width="72" height="52" rx="4" stroke="#9aabb8" stroke-width="2" />
-                <circle cx="24" cy="22" r="8" stroke="#9aabb8" stroke-width="2" />
-                <path d="M4 52 L20 34 L36 46 L52 28 L76 52" stroke="#9aabb8" stroke-width="2" fill="none" />
-              </svg>
-              <span>web-1.jpg</span>
-            </div>
+            <a href="https://danielmontanoztm.github.io/aprendizajelsc/Index.html" target="_blank">
+              <img src="Imagenes/fondo7.png" alt="Fondo proyecto 1">
+            </a>
+          </div>
+
+
+          <div class="proj-card">
+            <img src="Imagenes/fondo5.png" alt="Fondo proyecto 1">
           </div>
 
           <div class="proj-card">
-            <div class="img-placeholder">
-              <svg viewBox="0 0 80 60" fill="none">
-                <rect x="4" y="4" width="72" height="52" rx="4" stroke="#9aabb8" stroke-width="2" />
-                <circle cx="24" cy="22" r="8" stroke="#9aabb8" stroke-width="2" />
-                <path d="M4 52 L20 34 L36 46 L52 28 L76 52" stroke="#9aabb8" stroke-width="2" fill="none" />
-              </svg>
-              <span>web-2.jpg</span>
-            </div>
+            <img src="Imagenes/fondo6.png" alt="Fondo proyecto 1">
           </div>
 
-          <div class="proj-card">
-            <div class="img-placeholder">
-              <svg viewBox="0 0 80 60" fill="none">
-                <rect x="4" y="4" width="72" height="52" rx="4" stroke="#9aabb8" stroke-width="2" />
-                <circle cx="24" cy="22" r="8" stroke="#9aabb8" stroke-width="2" />
-                <path d="M4 52 L20 34 L36 46 L52 28 L76 52" stroke="#9aabb8" stroke-width="2" fill="none" />
-              </svg>
-              <span>web-3.jpg</span>
-            </div>
-          </div>
         </div>
 
-        <button class="btn-carousel btn-next" aria-label="Imagen siguiente en Diseño web">❯</button>
-        <div class="carousel-dots" aria-hidden="true"></div>
+      </div>
+
+      <button class="btn-carousel btn-next" aria-label="Imagen siguiente en Diseño web">❯</button>
+      <div class="carousel-dots" aria-hidden="true"></div>
 
       </div>
     </section>
 
+
+
   </main>
 
+  <!-- 🔽 AQUÍ VA EL MODAL DEL VIDEO -->
+  <div id="videoModal" class="video-modal">
+    <div class="video-content">
+      <span class="close">&times;</span>
+
+      <video id="modalVideo" controls>
+        <source src="" type="video/mp4">
+      </video>
+
+    </div>
+  </div>
+
   <script src="js/main.js"></script>
+
+
+
 </body>
 
 </html>
