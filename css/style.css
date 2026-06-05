@@ -237,54 +237,54 @@ body {
 
 /* Sello de correo "2026" */
 .stamp {
-    background: url("../Imagenes/sello.png") center/contain no-repeat;
-    width: 120px;
-    height: 120px;
-    color: transparent;
-    transform: translateX(150px);
+  background: url("../Imagenes/sello.png") center/contain no-repeat;
+  width: 120px;
+  height: 120px;
+  color: transparent;
+  transform: translateX(150px);
 }
 
 /* Iconos decorativos flotantes en INICIO */
-.deco{
-    position:absolute;
-    pointer-events:none;
-    opacity:.75;
+.deco {
+  position: absolute;
+  pointer-events: none;
+  opacity: .75;
 }
 
-.deco1{
-    top:13%;
-    left:7%;
-    width:90px;
+.deco1 {
+  top: 13%;
+  left: 7%;
+  width: 90px;
 }
 
-.deco2{
-    top:10%;
-    left:44%;
-    width:90px;
+.deco2 {
+  top: 10%;
+  left: 44%;
+  width: 90px;
 }
 
-.deco3{
-    top:10%;
-    right:8%;
-    width:90px;
+.deco3 {
+  top: 10%;
+  right: 8%;
+  width: 90px;
 }
 
-.deco4{
-    bottom:26%;
-    left:6%;
-    width:90px;
+.deco4 {
+  bottom: 26%;
+  left: 6%;
+  width: 90px;
 }
 
-.deco5{
-    bottom:16%;
-    left:10%;
-    width:90px;
+.deco5 {
+  bottom: 16%;
+  left: 10%;
+  width: 90px;
 }
 
-.deco6{
-    bottom:16%;
-    left:64%;
-    width:90px;
+.deco6 {
+  bottom: 16%;
+  left: 64%;
+  width: 90px;
 }
 
 /* ============================================================
@@ -399,7 +399,7 @@ body {
   min-height: 400px;
 }
 
-.herram-clip{
+.herram-clip {
   position: absolute;
   top: -20px;
   left: 10px;
@@ -417,9 +417,10 @@ body {
   margin-bottom: 24px;
 }
 
-.tools-grid-img{
+.tools-grid-img {
   width: 100%;
-  max-width: 600px; /* ajusta según tu diseño */
+  max-width: 600px;
+  /* ajusta según tu diseño */
   height: auto;
   display: block;
   margin: 0 auto;
@@ -456,7 +457,7 @@ body {
   padding: 1px 18px -10px;
 }
 
-.proj-clip{
+.proj-clip {
   width: 30px;
   height: auto;
   transform: rotate(-12deg);
@@ -477,11 +478,13 @@ body {
   padding: 6px 50px 7px;
   border-radius: var(--r-sm) var(--r-sm) 0 0;
 
-  box-shadow: 0 -3px 8px rgba(0,0,0,0.18);
+  box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.18);
 
-  transform: translateY(20px); /* ❌ quita el 2px */
+  transform: translateY(20px);
+  /* ❌ quita el 2px */
 
-  border-bottom: none; /* ❌ elimina el borde gigante */
+  border-bottom: none;
+  /* ❌ elimina el borde gigante */
 }
 
 /* Fondos: verde oliva */
@@ -588,7 +591,7 @@ body {
 .video-modal {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.85);
+  background: rgba(0, 0, 0, 0.85);
 
   display: none;
   justify-content: center;
@@ -642,14 +645,14 @@ body {
 
 
 /* Fila iconos decorativos en header del card */
-.contact-deco-row{
+.contact-deco-row {
   display: flex;
   gap: 10px;
   align-items: center;
   justify-content: center;
 }
 
-.contact-icon{
+.contact-icon {
   width: 40px;
   height: auto;
   display: block;
@@ -771,7 +774,7 @@ body {
   height: 94px;
 }
 
-.btn-enviar{
+.btn-enviar {
   background: transparent;
   border: none;
   padding: 0;
@@ -781,13 +784,13 @@ body {
   transition: transform .2s ease;
 }
 
-.btn-enviar-img{
+.btn-enviar-img {
   width: 90px;
   height: auto;
   display: block;
 }
 
-.btn-enviar:hover{
+.btn-enviar:hover {
   transform: scale(1.05);
 }
 
@@ -819,13 +822,19 @@ body {
     padding: 28px 20px 32px;
   }
 
-  /* Carrusel */
+
   .carousel-wrap {
-    padding: 12px 40px 20px;
+    padding: 12px 32px 20px;
   }
+  
 
   .proj-card {
-    height: 200px;
+    height: 220px;
+    border-radius: var(--r-sm);
+  }
+
+  .proj-card img {
+    object-fit: cover;
   }
 }
 
