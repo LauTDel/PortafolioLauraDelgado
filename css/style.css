@@ -1,0 +1,839 @@
+/* ============================================================
+   PORTAFOLIO LAURA DELGADO — style.css
+   Paleta: azul marino, teal, crema, olive, slate, mauve, dorado
+   Tipografías: Pacifico (display/script) + Simonetta (body)
+   ============================================================ */
+
+/* ── GOOGLE FONTS ── */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Simonetta:ital,wght@0,400;0,900;1,400&family=Caveat:wght@600;700&display=swap');
+
+
+@font-face {
+  font-family: 'Adamd';
+  src: url('../fonts/Adamd.ttf') format('truetype');
+}
+
+
+/* ── VARIABLES ── */
+:root {
+  /* Colores principales */
+  --navy: #213448;
+  --navy-mid: #22345a;
+  --teal: #5e8fa3;
+  --teal-light: #7aafc3;
+  --teal-dark: #3d6e85;
+  --cream: #e8e0d0;
+  --cream-light: #f0ebe0;
+  --beige: #d6cec0;
+  --gray-card: #c8c2b8;
+  --gray-note: #b0aaa0;
+
+  /* Colores de secciones proyectos */
+  --olive: #6b7042;
+  --olive-mid: #7a7f50;
+  --slate: #8090a8;
+  --slate-light: #a8b4c4;
+  --slate-bg: #9aa8bc;
+  --mauve: #7a6878;
+  --mauve-light: #a090a0;
+  --mauve-bg: #8c7c8c;
+
+  /* Acento dorado */
+  --gold: #c8a84b;
+  --gold-light: #dfc060;
+
+  /* Tipografías */
+  --font-title: 'Adamd';
+  --font-body: 'Simonetta';
+
+  /* Radios y sombras */
+  --r-lg: 18px;
+  --r-md: 12px;
+  --r-sm: 8px;
+  --shadow: 0 4px 24px rgba(0, 0, 0, .20);
+  --shadow-sm: 0 2px 10px rgba(0, 0, 0, .14);
+}
+
+/* ── RESET ── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--navy);
+  min-height: 100vh;
+  color: var(--navy);
+}
+
+/* ── UTILIDADES ── */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+/* ============================================================
+   BARRA DE NAVEGACIÓN — TABS DE CARPETA
+   Presente en todas las páginas
+   ============================================================ */
+.site-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  background: var(--navy);
+  height: 56px;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 12px;
+}
+
+/* Contenedor de tabs centrado */
+.nav-inner {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+}
+
+/* Cada tab */
+.nav-tab {
+  font-family: var(--font-title);
+  font-size: 1rem;
+  text-decoration: none;
+  color: var(--cream);
+  padding: 9px 26px 11px;
+  border-radius: var(--r-md) var(--r-md) 0 0;
+  background: transparent;
+  transition: background .22s, color .22s;
+  letter-spacing: .02em;
+  white-space: nowrap;
+  flex: 1;
+  text-align: center;
+  display: block;
+}
+
+.nav-tab:hover,
+.nav-tab.active {
+  background: var(--cream-light);
+  color: var(--navy);
+}
+
+/* Línea decorativa bajo nav (efecto carpeta) */
+.nav-underline {
+  position: fixed;
+  top: 56px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--teal-light) 33%, var(--cream) 33% 66%, var(--teal) 66%);
+  z-index: 199;
+}
+
+/* ============================================================
+   WRAPPER GENERAL DE PÁGINA
+   ============================================================ */
+.page-wrapper {
+  margin-top: 62px;
+  /* nav + underline */
+  min-height: calc(100vh - 62px);
+  padding: 24px 16px 48px;
+}
+
+/* ============================================================
+   PLACEHOLDERS DE IMAGEN (reutilizable en todo el sitio)
+   ============================================================ */
+.img-placeholder {
+  background: var(--cream);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: var(--teal-dark);
+  font-family: var(--font-body);
+  font-size: .75rem;
+  text-align: center;
+  padding: 12px;
+  width: 100%;
+  height: 100%;
+}
+
+.img-placeholder svg {
+  width: 64px;
+  height: 64px;
+  opacity: .45;
+}
+
+.img-placeholder span {
+  color: #aaa;
+  font-size: .72rem;
+}
+
+/* ============================================================
+   PÁGINA: INICIO  (index.html)
+   ============================================================ */
+.inicio-wrapper {
+  background: var(--navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px 48px;
+}
+
+.inicio-card {
+  background: #213448;
+  border: 3px #213448;
+  border-top: none;
+  border-radius: 0 0 var(--r-lg) var(--r-lg);
+  width: 100%;
+  max-width: 1000px;
+  min-height: 460px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 64px 40px 64px;
+  overflow: hidden;
+}
+
+/* Título principal "Portafolio" */
+.inicio-title {
+  font-family: var(--font-title);
+  font-size: clamp(3.6rem, 10vw, 8rem);
+  color: var(--cream);
+  text-align: center;
+  line-height: 1.05;
+  position: relative;
+  z-index: 2;
+}
+
+.inicio-subtitle {
+  font-family: var(--font-body);
+  font-weight: 900;
+  font-size: clamp(.95rem, 2vw, 1.4rem);
+  color: var(--cream);
+  letter-spacing: .1em;
+  margin-top: 16px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Sello de correo "2026" */
+.stamp {
+    background: url("../Imagenes/sello.png") center/contain no-repeat;
+    width: 120px;
+    height: 120px;
+    color: transparent;
+    transform: translateX(150px);
+}
+
+/* Iconos decorativos flotantes en INICIO */
+.deco{
+    position:absolute;
+    pointer-events:none;
+    opacity:.75;
+}
+
+.deco1{
+    top:13%;
+    left:7%;
+    width:90px;
+}
+
+.deco2{
+    top:10%;
+    left:44%;
+    width:90px;
+}
+
+.deco3{
+    top:10%;
+    right:8%;
+    width:90px;
+}
+
+.deco4{
+    bottom:26%;
+    left:6%;
+    width:90px;
+}
+
+.deco5{
+    bottom:16%;
+    left:10%;
+    width:90px;
+}
+
+.deco6{
+    bottom:16%;
+    left:64%;
+    width:90px;
+}
+
+/* ============================================================
+   PÁGINA: SOBRE MÍ  (sobre-mi.html)
+   ============================================================ */
+.sobre-mi-wrapper {
+  background: var(--teal);
+  min-height: calc(100vh - 62px);
+  padding: 24px 16px 48px;
+  margin-top: 62px;
+}
+
+.sobre-inner {
+  max-width: 920px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* -- Tarjeta Bio -- */
+.bio-card {
+  background: var(--gray-card);
+  min-height: 400px;
+  border-radius: var(--r-lg);
+  padding: 30px 32px 30px;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 28px;
+  align-items: center;
+  box-shadow: var(--shadow-sm);
+}
+
+.bio-clip {
+  position: absolute;
+  top: -20px;
+  left: 10px;
+  width: 50px;
+  height: auto;
+  transform: rotate(-12deg);
+  z-index: 2;
+}
+
+.bio-text h1 {
+  font-family: var(--font-body);
+  text-align: center;
+  font-weight: 400;
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  color: var(--navy);
+  line-height: 1.25;
+}
+
+.bio-text h1 .name-script {
+  font-family: var(--font-title);
+  font-size: clamp(1.9rem, 5vw, 2.8rem);
+}
+
+.bio-text p {
+  margin-top: 14px;
+  font-size: clamp(.85rem, 1.4vw, .96rem);
+  line-height: 1.7;
+  color: var(--navy);
+}
+
+/* Polaroid foto */
+.polaroid-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+.polaroid {
+  background: #fff;
+  padding: 10px 10px 34px;
+  box-shadow: var(--shadow);
+  transform: rotate(3deg);
+  border-radius: 2px;
+  width: 160px;
+}
+
+.polaroid .photo-box {
+  width: 140px;
+  height: 168px;
+  overflow: hidden;
+  background: var(--beige);
+}
+
+.polaroid .photo-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Clip dorado sobre polaroid */
+.polaroid-clip {
+  position: absolute;
+  top: -20px;
+  right: -6px;
+  width: 34px;
+  transform: rotate(15deg);
+  z-index: 10;
+}
+
+/* -- Tarjeta Herramientas -- */
+.herram-card {
+  background: var(--cream-light);
+  border-radius: var(--r-lg);
+  padding: 32px 28px 40px;
+  position: relative;
+  box-shadow: var(--shadow-sm);
+  min-height: 400px;
+}
+
+.herram-clip{
+  position: absolute;
+  top: -20px;
+  left: 10px;
+  width: 50px;
+  height: auto;
+  transform: rotate(-12deg);
+  z-index: 2;
+}
+
+.herram-title {
+  font-family: var(--font-title);
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: var(--navy);
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.tools-grid-img{
+  width: 100%;
+  max-width: 600px; /* ajusta según tu diseño */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Decoraciones flotantes sobre-mi */
+.sobre-deco {
+  position: absolute;
+  pointer-events: none;
+  font-size: 1rem;
+}
+
+/* ============================================================
+   PÁGINA: PROYECTOS  (proyectos.html)
+   ============================================================ */
+.proyectos-wrapper {
+  background: var(--beige);
+  min-height: calc(100vh - 62px);
+  margin-top: 62px;
+  padding-bottom: 40px;
+}
+
+/* Cada sección de categoría */
+.proj-section {
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+/* Header de sección (con clip y etiqueta tab) */
+.proj-header {
+  display: flex;
+  align-items: flex-end;
+  gap: 0;
+  padding: 16px 18px 0;
+}
+
+.proj-clip{
+  width: 22px;
+  height: auto;
+  transform: rotate(-12deg);
+  margin-left: 50px;
+  margin-right: 4px;
+  margin-bottom: 2px;
+  display: inline-block;
+}
+
+.proj-tab-label {
+  display: inline-block;
+  background: var(--cream-light);
+  font-family: var(--font-body);
+  font-weight: 900;
+  font-size: 1rem;
+  color: var(--navy);
+  padding: 5px 20px 6px;
+  border-radius: var(--r-sm) var(--r-sm) 0 0;
+}
+
+/* Fondos: verde oliva */
+.sec-fondos {
+  background: var(--olive);
+}
+
+/* Modelos 3D: azul slate */
+.sec-modelos {
+  background: var(--slate-bg);
+}
+
+/* Diseño web: mauve */
+.sec-disenio {
+  background: var(--mauve-bg);
+}
+
+/* Carrusel */
+.carousel-wrap {
+  position: relative;
+  padding: 14px 52px 24px;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 0;
+  transition: transform .4s cubic-bezier(.4, 0, .2, 1);
+}
+
+.proj-card {
+  min-width: 100%;
+  height: 400px;
+  background: #fff;
+  border-radius: var(--r-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.proj-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Botones del carrusel */
+.btn-carousel {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-title);
+  font-size: 2.4rem;
+  color: var(--gold);
+  padding: 4px 8px;
+  line-height: 1;
+  z-index: 5;
+  transition: transform .15s, color .15s;
+}
+
+.btn-carousel:hover {
+  color: var(--gold-light);
+  transform: translateY(-50%) scale(1.15);
+}
+
+.btn-prev {
+  left: 6px;
+}
+
+.btn-next {
+  right: 6px;
+}
+
+/* Puntos indicadores del carrusel */
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 0 10px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .45);
+  border: none;
+  cursor: pointer;
+  transition: background .2s;
+  padding: 0;
+}
+
+.dot.active {
+  background: var(--gold);
+}
+
+/* ============================================================
+   PÁGINA: CONTACTO  (contacto.html)
+   ============================================================ */
+.contacto-wrapper {
+  background: var(--teal);
+  min-height: calc(100vh - 62px);
+  margin-top: 62px;
+  padding: 24px 16px 48px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.contact-outer {
+  width: 100%;
+  max-width: 960px;
+}
+
+/* Tarjeta principal (fondo gris claro, como papel) */
+.contact-card {
+  background: var(--gray-card);
+  border-radius: var(--r-lg);
+  padding: 32px 36px 40px;
+  position: relative;
+  box-shadow: var(--shadow);
+  overflow: visible;
+}
+
+
+/* Fila iconos decorativos en header del card */
+.contact-deco-row{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-icon{
+  width: 40px;
+  height: auto;
+  display: block;
+}
+
+.contact-title {
+  font-family: var(--font-title);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  color: var(--navy);
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Layout de dos columnas: info | form */
+.contact-body {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 36px;
+  align-items: start;
+}
+
+/* --- Info de contacto --- */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.contact-info-row {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.contact-info-icon img {
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-info-icon svg {
+  width: 44px;
+  height: 44px;
+}
+
+.contact-info-text {
+  font-family: var(--font-body);
+  font-weight: 900;
+  font-size: clamp(.88rem, 1.5vw, 1rem);
+  color: var(--navy);
+  word-break: break-all;
+}
+
+/* --- Formulario --- */
+.contact-form {
+  background: var(--teal-dark);
+  border-radius: var(--r-md);
+  padding: 24px 22px 28px;
+  position: relative;
+}
+
+/* Puntos dorados del formulario */
+.form-dot {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background: radial-gradient(circle at 35% 35%, var(--gold-light), var(--gold));
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .28);
+}
+
+.form-dot-tr {
+  top: -12px;
+  right: -10px;
+}
+
+.form-dot-bl {
+  bottom: -12px;
+  left: 24px;
+}
+
+.form-group {
+  margin-bottom: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-group label {
+  font-family: var(--font-body);
+  font-weight: 900;
+  font-size: .9rem;
+  color: var(--navy);
+}
+
+.form-group input,
+.form-group textarea {
+  background: var(--cream-light);
+  border: none;
+  border-radius: var(--r-sm);
+  padding: 9px 12px;
+  font-family: var(--font-body);
+  font-size: .9rem;
+  color: var(--navy);
+  outline: none;
+  transition: box-shadow .2s;
+  resize: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  box-shadow: 0 0 0 2px var(--gold);
+}
+
+.form-group textarea {
+  height: 94px;
+}
+
+.btn-enviar{
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  margin: 10px auto 0;
+  display: block;
+  transition: transform .2s ease;
+}
+
+.btn-enviar-img{
+  width: 90px;
+  height: auto;
+  display: block;
+}
+
+.btn-enviar:hover{
+  transform: scale(1.05);
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 700px) {
+  .nav-tab {
+    font-size: .78rem;
+    padding: 7px 8px 9px;
+  }
+
+  /* Sobre mí */
+  .bio-card {
+    grid-template-columns: 1fr;
+  }
+
+  .polaroid {
+    margin: 0 auto;
+    transform: rotate(1deg);
+  }
+
+  /* Contacto */
+  .contact-body {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-card {
+    padding: 28px 20px 32px;
+  }
+
+  /* Carrusel */
+  .carousel-wrap {
+    padding: 12px 40px 20px;
+  }
+
+  .proj-card {
+    height: 200px;
+  }
+}
+
+@media (max-width: 420px) {
+  .inicio-title {
+    font-size: 3rem;
+  }
+
+  .stamp {
+    top: 16px;
+    right: 12px;
+  }
+
+  .nav-tab {
+    font-size: .7rem;
+    padding: 6px 6px 8px;
+  }
+}
+
+/* ============================================================
+   ANIMACIÓN DE ENTRADA (fade-in al cargar página)
+   ============================================================ */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeInUp .5s ease both;
+}
+
+.fade-in-2 {
+  animation: fadeInUp .5s .12s ease both;
+}
+
+.fade-in-3 {
+  animation: fadeInUp .5s .24s ease both;
+}

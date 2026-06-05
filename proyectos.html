@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Proyectos – Laura Delgado, portafolio multimedia" />
+  <title>Proyectos — Portafolio Laura Delgado</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!-- ====================================================
+       NAVEGACIÓN
+  ==================================================== -->
+  <nav class="site-nav" role="navigation" aria-label="Navegación principal">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-tab">Inicio</a>
+      <a href="sobre-mi.html" class="nav-tab">Sobre mí</a>
+      <a href="proyectos.html" class="nav-tab">Proyectos</a>
+      <a href="contacto.html" class="nav-tab">Contacto</a>
+    </div>
+  </nav>
+  <div class="nav-underline" aria-hidden="true"></div>
+
+  <!-- ====================================================
+       PÁGINA: PROYECTOS
+       Wireframe: tres secciones en franjas de color
+       (olive / slate / mauve), cada una con carrusel
+       de imágenes y botones ❮ ❯ dorados
+  ==================================================== -->
+  <main class="proyectos-wrapper" aria-label="Proyectos">
+
+    <!-- ════════════════════════════════
+         SECCIÓN 1: FONDOS (olive)
+    ════════════════════════════════ -->
+    <section class="proj-section sec-fondos" aria-labelledby="cat-fondos">
+
+      <div class="proj-header">
+        <img src="Imagenes/clip.png" class="proj-clip" alt="" aria-hidden="true">
+        <h2 id="cat-fondos" class="proj-tab-label">Fondos</h2>
+      </div>
+
+      <!-- Carrusel -->
+      <div class="carousel-wrap" data-carousel="fondos" aria-label="Carrusel de fondos">
+
+        <button class="btn-carousel btn-prev" aria-label="Imagen anterior en Fondos">❮</button>
+
+        <div class="carousel-track">
+          <!--
+            ╔══════════════════════════════════════════════════╗
+            ║  REEMPLAZAR IMÁGENES — SECCIÓN FONDOS           ║
+            ║  Sustituye cada div.img-placeholder por:        ║
+            ║  <img src="img/fondos/fondo-1.jpg"              ║
+            ║       alt="Descripción del fondo" />            ║
+            ║  Puedes añadir o quitar tarjetas según          ║
+            ║  la cantidad de imágenes que tengas.            ║
+            ╚══════════════════════════════════════════════════╝
+          -->
+          <div class="proj-card">
+            <img src="Imagenes/fondo1.png" alt="Fondo proyecto 1">
+          </div>
+
+          <div class="proj-card">
+            <img src="Imagenes/fondo2.png" alt="Fondo proyecto 1">
+          </div>
+
+          <div class="proj-card">
+            <img src="Imagenes/fondo3.png" alt="Fondo proyecto 1">
+          </div>
+
+        </div>
+
+        <button class="btn-carousel btn-next" aria-label="Imagen siguiente en Fondos">❯</button>
+
+        <!-- Puntos indicadores (generados por JS) -->
+        <div class="carousel-dots" aria-hidden="true"></div>
+
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════
+         SECCIÓN 2: MODELOS 3D (slate)
+    ════════════════════════════════ -->
+    <section class="proj-section sec-modelos" aria-labelledby="cat-modelos">
+
+      <div class="proj-header">
+        <img src="Imagenes/clip.png" class="proj-clip" alt="" aria-hidden="true">
+        <h2 id="cat-modelos" class="proj-tab-label">Modelos 3D</h2>
+      </div>
+
+      <div class="carousel-wrap" data-carousel="modelos" aria-label="Carrusel de modelos 3D">
+
+        <button class="btn-carousel btn-prev" aria-label="Imagen anterior en Modelos 3D">❮</button>
+
+        <div class="carousel-track">
+          <!--
+            ╔══════════════════════════════════════════════════╗
+            ║  REEMPLAZAR IMÁGENES — SECCIÓN MODELOS 3D       ║
+            ║  <img src="img/modelos/modelo-1.jpg"            ║
+            ║       alt="Modelo 3D 1" />                      ║
+            ╚══════════════════════════════════════════════════╝
+          -->
+          <div class="proj-card">
+            <div class="img-placeholder">
+              <svg viewBox="0 0 80 60" fill="none">
+                <rect x="4" y="4" width="72" height="52" rx="4" stroke="#9aabb8" stroke-width="2" />
+                <circle cx="24" cy="22" r="8" stroke="#9aabb8" stroke-width="2" />
+                <path d="M4 52 L20 34 L36 46 L52 28 L76 52" stroke="#9aabb8" stroke-width="2" fill="none" />
+              </svg>
+              <span>modelo-1.jpg</span>
+            </div>
+          </div>
+
+          <div class="proj-card">
+            <div class="img-placeholder">
+              <svg viewBox="0 0 80 60" fill="none">
+                <rect x="4" y="4" width="72" height="52" rx="4" stroke="#9aabb8" stroke-width="2" />
+                <circle cx="24" cy="22" r="8" stroke="#9aabb8" stroke-width="2" />
+                <path d="M4 52 L20 34 L36 46 L52 28 L76 52" stroke="#9aabb8" stroke-width="2" fill="none" />
+              </svg>
+              <span>modelo-2.jpg</span>
+            </div>
+          </div>
+
+          <div class="proj-card">
+            <div class="img-placeholder">
+              <svg viewBox="0 0 80 60" fill="none">
+                <rect x="4" y="4" width="72" height="52" rx="4" stroke="#9aabb8" stroke-width="2" />
+                <circle cx="24" cy="22" r="8" stroke="#9aabb8" stroke-width="2" />
+                <path d="M4 52 L20 34 L36 46 L52 28 L76 52" stroke="#9aabb8" stroke-width="2" fill="none" />
+              </svg>
+              <span>modelo-3.jpg</span>
+            </div>
+          </div>
+        </div>
+
+        <button class="btn-carousel btn-next" aria-label="Imagen siguiente en Modelos 3D">❯</button>
+        <div class="carousel-dots" aria-hidden="true"></div>
+
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════
+         SECCIÓN 3: DISEÑO WEB (mauve)
+    ════════════════════════════════ -->
+    <section class="proj-section sec-disenio" aria-labelledby="cat-disenio">
+
+      <div class="proj-header">
+        <img src="Imagenes/clip.png" class="proj-clip" alt="" aria-hidden="true">
+        <h2 id="cat-disenio" class="proj-tab-label">Diseño web</h2>
+      </div>
+
+      <div class="carousel-wrap" data-carousel="disenio" aria-label="Carrusel de diseño web">
+
+        <button class="btn-carousel btn-prev" aria-label="Imagen anterior en Diseño web">❮</button>
+
+        <div class="carousel-track">
+          <!--
+            ╔══════════════════════════════════════════════════╗
+            ║  REEMPLAZAR IMÁGENES — SECCIÓN DISEÑO WEB       ║
+            ║  <img src="img/disenio/web-1.jpg"               ║
+            ║       alt="Proyecto web 1" />                   ║
+            ╚══════════════════════════════════════════════════╝
+          -->
+          <div class="proj-card">
+            <div class="img-placeholder">
+              <svg viewBox="0 0 80 60" fill="none">
+                <rect x="4" y="4" width="72" height="52" rx="4" stroke="#9aabb8" stroke-width="2" />
+                <circle cx="24" cy="22" r="8" stroke="#9aabb8" stroke-width="2" />
+                <path d="M4 52 L20 34 L36 46 L52 28 L76 52" stroke="#9aabb8" stroke-width="2" fill="none" />
+              </svg>
+              <span>web-1.jpg</span>
+            </div>
+          </div>
+
+          <div class="proj-card">
+            <div class="img-placeholder">
+              <svg viewBox="0 0 80 60" fill="none">
+                <rect x="4" y="4" width="72" height="52" rx="4" stroke="#9aabb8" stroke-width="2" />
+                <circle cx="24" cy="22" r="8" stroke="#9aabb8" stroke-width="2" />
+                <path d="M4 52 L20 34 L36 46 L52 28 L76 52" stroke="#9aabb8" stroke-width="2" fill="none" />
+              </svg>
+              <span>web-2.jpg</span>
+            </div>
+          </div>
+
+          <div class="proj-card">
+            <div class="img-placeholder">
+              <svg viewBox="0 0 80 60" fill="none">
+                <rect x="4" y="4" width="72" height="52" rx="4" stroke="#9aabb8" stroke-width="2" />
+                <circle cx="24" cy="22" r="8" stroke="#9aabb8" stroke-width="2" />
+                <path d="M4 52 L20 34 L36 46 L52 28 L76 52" stroke="#9aabb8" stroke-width="2" fill="none" />
+              </svg>
+              <span>web-3.jpg</span>
+            </div>
+          </div>
+        </div>
+
+        <button class="btn-carousel btn-next" aria-label="Imagen siguiente en Diseño web">❯</button>
+        <div class="carousel-dots" aria-hidden="true"></div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

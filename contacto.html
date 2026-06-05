@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contacto – Laura Delgado, diseñadora multimedia" />
+  <title>Contacto — Portafolio Laura Delgado</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!-- ====================================================
+       NAVEGACIÓN
+  ==================================================== -->
+  <nav class="site-nav" role="navigation" aria-label="Navegación principal">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-tab">Inicio</a>
+      <a href="sobre-mi.html" class="nav-tab">Sobre mí</a>
+      <a href="proyectos.html" class="nav-tab">Proyectos</a>
+      <a href="contacto.html" class="nav-tab">Contacto</a>
+    </div>
+  </nav>
+  <div class="nav-underline" aria-hidden="true"></div>
+
+  <!-- ====================================================
+       PÁGINA: CONTACTO
+       Wireframe: fondo teal, tarjeta gris con título
+       "¡Trabajemos juntos!", info de contacto a la izquierda
+       (teléfono, email, instagram) y formulario a la derecha
+       con puntos dorados en esquinas del form-card
+  ==================================================== -->
+  <main class="contacto-wrapper" aria-label="Contacto">
+    <div class="contact-outer">
+
+      <div class="contact-card fade-in">
+
+
+        <div class="contact-deco-row" aria-hidden="true">
+
+          <img src="Imagenes/brillo1.png" class="contact-icon icon1" alt="">
+          <img src="Imagenes/brillo2.png" class="contact-icon icon2" alt="">
+          <img src="Imagenes/camara.png" class="contact-icon icon3" alt="">
+          <img src="Imagenes/compu.png" class="contact-icon icon4" alt="">
+          <img src="Imagenes/celular.png" class="contact-icon icon5" alt="">
+          <img src="Imagenes/tableta.png" class="contact-icon icon6" alt="">
+
+        </div>
+
+        <!-- Título -->
+        <h1 class="contact-title">¡Trabajemos juntos!</h1>
+
+        <!-- Cuerpo: info + formulario -->
+        <div class="contact-body">
+
+          <!-- ── Información de contacto ── -->
+          <address class="contact-info" aria-label="Datos de contacto">
+
+            <!-- Teléfono -->
+            <div class="contact-info-row">
+              <div class="contact-info-icon" aria-hidden="true">
+                <img src="Imagenes/celular.png" class="icon-phone" alt="">
+              </div>
+              <span class="contact-info-text">3222508858</span>
+            </div>
+
+            <!-- Email -->
+            <div class="contact-info-row">
+              <div class="contact-info-icon" aria-hidden="true">
+                <img src="Imagenes/correo.png" class="icon-mail" alt="">
+              </div>
+              <span class="contact-info-text">tatianagd200113@gmail.com</span>
+            </div>
+
+            <!-- Instagram -->
+            <div class="contact-info-row">
+              <div class="contact-info-icon" aria-hidden="true">
+                <img src="Imagenes/insta.png" class="icon-instagram" alt="">
+              </div>
+              <span class="contact-info-text">@lauradeg_</span>
+            </div>
+
+          </address>
+
+          <!-- ── Formulario ── -->
+          <div class="contact-form" role="region" aria-label="Formulario de contacto">
+
+            <!-- Puntos decorativos (pueden ser imágenes si quieres luego) -->
+            <div class="form-dot form-dot-tr" aria-hidden="true"></div>
+            <div class="form-dot form-dot-bl" aria-hidden="true"></div>
+
+            <form id="contact-form" action="https://formsubmit.co/tatianagd200113@gmail.com" method="POST">
+
+              <!-- configuración FormSubmit -->
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_template" value="table">
+              <input type="hidden" name="_next" value="http://127.0.0.1:5500/contacto.html">
+              
+
+              <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" autocomplete="name" required />
+              </div>
+
+              <div class="form-group">
+                <label for="correo">Correo</label>
+                <input type="email" id="correo" name="correo" autocomplete="email" required />
+              </div>
+
+              <div class="form-group">
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" required></textarea>
+              </div>
+
+              <!-- Botón conservando clase -->
+              <button class="btn-enviar" type="submit">
+                <img src="Imagenes/enviar.png" class="btn-enviar-img" alt="Enviar">
+              </button>
+
+            </form>
+
+          </div>
+
+          </form>
+        </div>
+
+      </div><!-- /.contact-body -->
+
+    </div><!-- /.contact-card -->
+    </div><!-- /.contact-outer -->
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
